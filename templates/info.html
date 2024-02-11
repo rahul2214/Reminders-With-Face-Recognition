@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Recognition Results</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0; 
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, {{ name }}</h1>
+    <div id="mirror">
+      
+        <div id="reminder-container">
+            {% if str %}
+        <p>{{ str }}</p>
+    {% else %}
+        <h2>your Reminders for Today:</h2>
+        <ul>
+            {% for task in data_list %}
+                <li>{{ task[0] }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+            
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+    
+</body>
+</html>
+
+
+
+
